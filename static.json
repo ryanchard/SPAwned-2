@@ -8,10 +8,10 @@
     "version": "1.0.0",
     "attributes": {
       "metadata": {
-        "title": "spawn"
+        "title": "{{ portal_title }}"
       },
       "content": {
-        "headline": "spawned"
+        "headline": "{{ portal_subtitle }}"
       },
       "features": {
         "transfer": false
@@ -29,6 +29,10 @@
               "property": "entries[0].content.file.size_bytes"
             },
             {
+              "label": "Extension",
+              "property": "entries[0].content.file.extension"
+            },
+            {
               "label": "Language",
               "property": "entries[0].content.language"
             },
@@ -44,28 +48,26 @@
               "label": "Imports",
               "property": "entries[0].content.imports"
             }
+            {
+              "label": "Content Preview",
+              "property": "entries[0].content.content_preview"
+            }
           ]
         }
       },
       "globus": {
         "search": {
-          "index": "e263b547-bdff-4d7a-83f0-f50a05f97771",
+          "index": "{{ index_name }}",
           "facets": [
             {
               "name": "Directory",
-              "field_name": "entries[0].content.file.directory",
+              "field_name": "directory",
               "type": "terms",
               "size": 10
             },
             {
               "name": "Extension",
-              "field_name": "entries[0].content.file.extension",
-              "type": "terms",
-              "size": 10
-            },
-            {
-              "name": "File Size",
-              "field_name": "entries[0].content.file.size_bytes",
+              "field_name": "extension",
               "type": "terms",
               "size": 10
             }
