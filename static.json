@@ -22,7 +22,7 @@
           "fields": [
             {
               "label": "Directory",
-              "property": "entries[0].content.file.dirctory"
+              "property": "entries[0].content.file.directory"
             },
             {
               "label": "Size",
